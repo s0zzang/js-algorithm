@@ -8,8 +8,10 @@ class Node {
 
 class BrowserHistory {
   constructor(home) {
-    this.head = new Node(home);
-    this.current = new Node(home);
+    this.head = new Node(home); // 사실 사용되지 않아서 선언하지 않아도 됨
+    this.current = this.head;
+    // this.current = new Node(home);
+    // -> 다른 노드 2개가 생성되기 때문에 의도한 바와 벗어남
   }
 
   visit(url) {
